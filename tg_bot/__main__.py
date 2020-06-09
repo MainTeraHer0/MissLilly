@@ -28,25 +28,16 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 PM_START_TEXT = """
 
 
-┈┈┈┈╱▔▔▔▔╲┈┈┈┈
-┈┈┈▕▕╲┊┊╱▏▏┈┈┈
-┈┈┈▕▕▂╱╲▂▏▏┈┈┈
-┈┈┈┈╲┊┊┊┊╱┈┈┈┈
-┈┈┈┈▕╲▂▂╱▏┈┈┈┈
-╱▔▔▔▔┊┊┊┊▔▔▔▔╲
-HOI    {}, MY NAME IS {} !
-
-I AM A GROUP MANAGER BOT MAINTAINED BY 
-
-[THIS LEGEND](tg://user?id={}).
-
-HIT HELP FOR COMMANDS  /help
-
-I AM COMPLETELY OPEN SOURCE
-
-MY SOURCE CODE IS AVAILABLE TO YOU
-
-[HERE](https://github.com/leobrownlee/phantom)
+hey there 👋
+my name is Lilly Bot im here to help you manage your groups
+hit! /help to fine out more about
+how to use me to my full potential!
+[°](https://telegra.ph/file/868b6fb7dae0d490776ca.mp4)
+make sure to join our [Support Group](t.me/LillyBotChat)
+*Donation*
+your also donate to the
+person currently running me
+[Donate](PayPal.me/MrSammy07)
 
 """
 
@@ -55,12 +46,12 @@ HELP_STRINGS = """
 Hello! my name *{}*.
 
 *Main* commands available:
- - /start: start the bot
- - /help: PM's you this message.
- - /help <module name>: PM's you info about that module.
- - /settings:
-   - in PM: will send you your settings for all supported modules.
-   - in a group: will redirect you to pm, with all that chat's settings.
+[-_-](https://telegra.ph/file/29e6dd30486d7eb69c330.jpg)
+
+
+
+
+
 
 
 {}
