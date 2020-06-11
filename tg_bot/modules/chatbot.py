@@ -91,10 +91,10 @@ __mod_name__ = "CHAT BOT"
 
 __help__ = """
 
-Powered by CoffeeHouse (https://coffeehouse.intellivoid.net/) from @Intellivoid
+Powered by  [MaDGuy](https://telegra.ph/file/f0da3d1835c7fd3e576d7.jpg)
 
- - /addchat : Enables Chatbot mode in the chat.
- - /rmchat  : Disables Chatbot mode in the chat.
+ - Automatic chat take permission from my boss contact now 
+ - @MadNooB
 """
                   
 ADD_CHAT_HANDLER = CommandHandler("addchat", add_chat, filters=CustomFilters.dev_filter)
