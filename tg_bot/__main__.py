@@ -52,7 +52,7 @@ Hello! my name *{}*.
 
 ❓ What are the *Commands* press to /help to see all the commands and how they works!
 
-*Subscribe" if you 💔 using this bot:
+*Subscribe* @rkprojects if you 💔 using this bot:
 
 {}
 *And* the following:
@@ -147,7 +147,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="ADD ME TO YOUR GROUP",
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔸ADD ME TO YOUR GROUP🔸",
                                                                        url="t.me/{}?startgroup=true".format(bot.username))]]))
 
 
