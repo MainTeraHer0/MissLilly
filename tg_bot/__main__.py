@@ -45,17 +45,17 @@ HELP_STRINGS = """
 
 Hello! my name *{}*.
 
-*Main* commands available:
-[-_-](https://telegra.ph/file/29e6dd30486d7eb69c330.jpg)
+@MissLillyBot is the *most* complete Bot to help you *manage* your groups easily and *safely!*
 
+👉 *Add* me in a supergroup and promote me as 
+*admin* to let me get in action!
 
+❓ What are the *Commands* press to /help to see all the commands and how they works!
 
-
-
-
+*Subscribe" if you 💔 using this bot:
 
 {}
-And the following:
+*And* the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
 
