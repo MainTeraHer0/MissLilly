@@ -53,15 +53,15 @@ Hello! my name *{}*.
 ❓ What are the *Commands* press to /help to see all the commands and how they works!
 
 *Subscribe* @rkprojects if you 💔 using this bot:
-*Donate* [Paytm](https://paytm.me/d-tXs3H)
+ - /donate: information about how to donate!
 {}
 *And* the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-Saitama is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [Paytm](https://paytm.me/d-tXs3H), or [PayPal](paypal.me/MrSammy07)."""
+DONATE_STRING = """TThanks for showing interest in my works
+To donate you can send any amount you wish to using the following
+
+**Payment Options :** """
 
 
 
@@ -473,6 +473,28 @@ def migrate_chats(bot: Bot, update: Update):
     LOGGER.info("Successfully migrated!")
     raise DispatcherHandlerStop
 
+@run_async
+def donate(bot: Bot, update: Update):
+    user = update.effective_message.from_user
+    chat = update.effective_chat  # type: Optional[Chat]
+
+    if chat.type == "private":
+        keyboard = [[InlineKeyboardButton(text="Paytm",url="https://paytm.me/d-tXs3H"),InlineKeyboardButton(text="PayPal",url="http://Paypal.me/MrSammy07")]]
+        keyboard += [[InlineKeyboardButton(text="For Other modes",url="https://t.me/MrSemmy")]]
+        update.effective_message.reply_text(DONATE_STRING,  reply_markup=InlineKeyboardMarkup(keyboard),parse_mode=ParseMode.MARKDOWN)
+
+
+
+    else:
+        try:
+            bot.send_message(user.id, DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+
+            update.effective_message.reply_text("I've PM'ed you about donating to my creator!")
+        except Unauthorized:
+            update.effective_message.reply_text("Contact me in PM first to get donation information.")
+
+
+    
 
 def main():
     test_handler = CommandHandler("test", test)
@@ -489,7 +511,7 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-   
+    donate_handler = CommandHandler("donate", donate)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
     # dispatcher.add_handler(test_handler)
@@ -502,6 +524,7 @@ def main():
     dispatcher.add_handler(start_callback_handler)
     dispatcher.add_handler(IMDB_HANDLER)
     dispatcher.add_handler(IMDB_SEARCHDATA_HANDLER)
+    dispatcher.add_handler(donate_handler)
     # dispatcher.add_error_handler(error_callback)
 
     if WEBHOOK:
