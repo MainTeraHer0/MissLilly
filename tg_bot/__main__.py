@@ -58,10 +58,10 @@ Hello! my name *{}*.
 *And* the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-DONATE_STRING = """TThanks for showing interest in my works
+DONATE_STRING = """Thanks for showing interest in my works
 To donate you can send any amount you wish to using the following
 
-**Payment Options :** """
+*Payment Options:* """UPI-`MrSammy07@ybl (Long pres to copy)
 
 
 
