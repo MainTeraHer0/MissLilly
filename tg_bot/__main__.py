@@ -61,7 +61,7 @@ Hello! my name *{}*.
 DONATE_STRING = """Thanks for showing interest in my works
 To donate you can send any amount you wish to using the following
 
-*Payment Options:* """UPI `MrSammy07@ybl` (Long pres to copy)
+*Payment Options:* UPI `MrSammy07@ybl` (Long pres to copy)
 
 
 
