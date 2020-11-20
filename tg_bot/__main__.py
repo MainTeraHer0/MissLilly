@@ -29,7 +29,7 @@ PM_START_TEXT = """
 
 
 Hey there {},
-My name is Lilly Bot im here to help you manage your groups
+My name is Payu Bot im here to help you manage your groups
 
 """
 
@@ -37,20 +37,20 @@ HELP_STRINGS = """
 
 Hello! my name *{}*.
 
-@MissLillyBot is the *most* complete Bot to help you *manage* your groups easily and *safely!*
+@MissPayuBot is the *most* complete Bot to help you *manage* your groups easily and *safely!*
 
 👉 *Add* me in a supergroup and promote me as 
 *admin* to let me get in action!
 
 
-*Subscribe* @rkprojects if you 💔 using this bot:
+*Subscribe* @MissPayuSupport if you 💔 using this bot:
  - /donate: information about how to donate!
 {}
 *And* the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
 
-MEIKO_IMG = "https://telegra.ph/file/3640b99616bc0a8b56f08.jpg"
+MEIKO_IMG = "https://telegra.ph/file/606558f12715f64de75bf.jpg"
 
 DONATE_STRING = """Thanks for showing interest in my works
 To donate you can send any amount you wish to using the following
@@ -146,8 +146,8 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup(
-         [[InlineKeyboardButton(text="Add Lilly To Your Group", url="https://t.me/misslillybot?startgroup=new")],
-         [InlineKeyboardButton(text="Support Group 👥", url="https://t.me/lillybotchat")],
+         [[InlineKeyboardButton(text="Add Payu To Your Group", url="https://t.me/misspayubot?startgroup=new")],
+         [InlineKeyboardButton(text="Support Group 👥", url="https://t.me/PayuSupportGroup")],
          [InlineKeyboardButton(text="Help And Commands ❔", callback_data="help_back")]])
             update.effective_message.reply_photo(MEIKO_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
